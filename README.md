@@ -48,6 +48,7 @@ See [Future scope](docs/FUTURE_SCOPE.md) for intentionally excluded features.
    ```text
    supabase/migrations/001_create_waitlist_signups.sql
    supabase/migrations/002_fluebaze_mvp.sql
+   supabase/migrations/003_focus_waitlist_on_ecommerce.sql
    ```
 
 5. In Supabase Authentication settings:
@@ -95,7 +96,7 @@ More detail: [Database design](docs/DATABASE.md) and [RLS security](docs/RLS_SEC
 Onboarding creates one campaign and two creators marked `· Sample`. For a larger local dataset:
 
 1. Create at least one Supabase Auth user.
-2. Apply both migrations.
+2. Apply all three migrations.
 3. Run `supabase/seed.sql` in the SQL editor.
 
 The seed is development-only, clearly marks its records, and is never executed automatically.
