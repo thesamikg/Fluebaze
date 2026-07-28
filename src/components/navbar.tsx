@@ -17,7 +17,7 @@ export function Navbar() {
         <div className="nav-links">
           {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
         </div>
-        <a className="button button-dark nav-cta" href="#waitlist">Join waitlist</a>
+        <a className="button button-dark nav-cta" href="#waitlist">Join pilot</a>
         <button
           className="menu-button"
           type="button"
@@ -34,7 +34,7 @@ export function Navbar() {
           {navigation.map((item) => (
             <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
           ))}
-          <a className="button button-dark" href="#waitlist" onClick={() => setOpen(false)}>Join waitlist</a>
+          <a className="button button-dark" href="#waitlist" onClick={() => setOpen(false)}>Join pilot</a>
         </div>
       )}
     </header>
