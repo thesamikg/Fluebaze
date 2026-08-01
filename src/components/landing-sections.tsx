@@ -19,7 +19,7 @@ export function HeroSection() {
         <Reveal className="hero-copy">
           <div className="eyebrow"><ShoppingBag size={13} /> The influencer CRM for e-commerce brands</div>
           <h1>Run creator campaigns like a <span>revenue channel.</span></h1>
-          <p>Manage relationships, product seeding, briefs, content, promo codes, payouts, and attributed sales—without stitching together spreadsheets, DMs, and store reports.</p>
+          <p>Manage relationships, product seeding, briefs, content, promo codes, payouts, and attributed sales without stitching together spreadsheets, DMs, and store reports.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#waitlist">Join early access <ArrowRight size={17} /></a>
             <a className="button button-secondary" href="#how-it-works">See the workflow <ArrowDown size={16} /></a>
