@@ -1,9 +1,9 @@
 import { ArrowUpRight, Check, CircleDollarSign, Clock3, MoreHorizontal, Sparkles } from "lucide-react";
 
 const creators = [
-  { initials: "AM", name: "Aisha Mehta", handle: "@aishamakes", status: "Approved", color: "violet" },
-  { initials: "JR", name: "Jonah Reed", handle: "@jonahdaily", status: "In review", color: "blue" },
-  { initials: "NS", name: "Nina Shah", handle: "@ninastudio", status: "Draft due", color: "orange" },
+  { initials: "AM", name: "Aisha Mehta", handle: "AMGLOW20 · 38 orders", status: "Top performer", color: "violet" },
+  { initials: "JR", name: "Jonah Reed", handle: "Product delivered · 16 Jul", status: "Draft due", color: "blue" },
+  { initials: "NS", name: "Nina Shah", handle: "Usage rights · 90 days", status: "In review", color: "orange" },
 ];
 
 export function ProductMockup() {
@@ -11,7 +11,7 @@ export function ProductMockup() {
     <div className="dashboard-shell" aria-label="Preview of a Fluebaze campaign dashboard">
       <div className="mock-browser-bar">
         <div className="browser-dots"><i /><i /><i /></div>
-        <span>Fluebaze / Summer social launch</span>
+        <span>Fluebaze / Glow Reset launch</span>
         <div className="browser-avatar">SK</div>
       </div>
       <div className="dashboard-grid">
@@ -21,39 +21,39 @@ export function ProductMockup() {
         </aside>
         <div className="dashboard-main">
           <div className="dashboard-heading">
-            <div><span className="mock-kicker">CAMPAIGN OVERVIEW</span><h3>Summer social launch</h3></div>
+            <div><span className="mock-kicker">ECOMMERCE CAMPAIGN</span><h3>Glow Reset launch</h3></div>
             <button type="button">View campaign <ArrowUpRight size={14} /></button>
           </div>
           <div className="metric-row">
-            <Metric label="Active creators" value="24" change="+4 this week" />
-            <Metric label="Total reach" value="1.8M" change="↑ 12.4%" accent />
-            <Metric label="Content live" value="38" change="6 awaiting" />
-            <Metric label="Campaign spend" value="$12.4k" change="68% paid" />
+            <Metric label="Attributed revenue" value="$48.6k" change="↑ 18.4%" accent />
+            <Metric label="Creator orders" value="386" change="+64 this week" />
+            <Metric label="Campaign ROAS" value="3.9×" change="Target 3.0×" accent />
+            <Metric label="Total cost" value="$12.4k" change="Fees + gifting" />
           </div>
           <div className="mock-content-grid">
             <div className="pipeline-card mock-card">
-              <div className="mock-card-title"><div><Sparkles size={15} /> Collaboration pipeline</div><MoreHorizontal size={16} /></div>
+              <div className="mock-card-title"><div><Sparkles size={15} /> Creator campaign pipeline</div><MoreHorizontal size={16} /></div>
               <div className="pipeline-columns">
                 <PipelineColumn title="Contacted" count={8} names={["Ravi K.", "Maya J."]} />
-                <PipelineColumn title="Confirmed" count={6} names={["Aisha M.", "Jonah R."]} highlight />
-                <PipelineColumn title="Content due" count={5} names={["Nina S.", "Leo P."]} />
-                <PipelineColumn title="Posted" count={12} names={["Dara C.", "Mila T."]} success />
+                <PipelineColumn title="Product sent" count={6} names={["Aisha M.", "Jonah R."]} highlight />
+                <PipelineColumn title="Content review" count={5} names={["Nina S.", "Leo P."]} />
+                <PipelineColumn title="Live" count={12} names={["Dara C.", "Mila T."]} success />
               </div>
             </div>
             <div className="creators-card mock-card">
-              <div className="mock-card-title"><div>Creators</div><span>View all</span></div>
+              <div className="mock-card-title"><div>Creator performance</div><span>View CRM</span></div>
               <div className="creator-list">
                 {creators.map((creator) => (
                   <div className="creator-row" key={creator.name}>
                     <span className={`creator-avatar ${creator.color}`}>{creator.initials}</span>
                     <span className="creator-name"><b>{creator.name}</b><small>{creator.handle}</small></span>
-                    <span className={`status-pill ${creator.status === "Approved" ? "success" : ""}`}>{creator.status}</span>
+                    <span className={`status-pill ${creator.status === "Top performer" ? "success" : ""}`}>{creator.status}</span>
                   </div>
                 ))}
               </div>
               <div className="payment-summary">
-                <div><CircleDollarSign size={16} /><span><b>18 payments</b><small>$8,420 of $12,400 paid</small></span></div>
-                <span className="progress-ring">68%</span>
+                <div><CircleDollarSign size={16} /><span><b>Creator economics</b><small>$48,600 revenue on $12,400 cost</small></span></div>
+                <span className="progress-ring">3.9×</span>
               </div>
             </div>
           </div>

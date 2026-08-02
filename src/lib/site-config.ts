@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Fluebaze",
   description:
-    "Manage influencer outreach, campaign deliverables, content approvals, payments, and performance from one simple workspace.",
+    "The influencer CRM for e-commerce brands to manage creator relationships, product seeding, content, payouts, and attributed revenue.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fluebaze.example",
   email: "hello@fluebaze.com",
   links: {
@@ -20,50 +20,50 @@ export const navigation = [
 ] as const;
 
 export const problems = [
-  "Creator details are scattered across spreadsheets.",
-  "Campaign conversations get lost in email and WhatsApp.",
-  "Deadlines and deliverables are difficult to track.",
-  "Draft approvals create long message threads.",
-  "Payment status is unclear.",
-  "Campaign performance is reported manually.",
+  "Creator history and rates are buried in spreadsheets and DMs.",
+  "Nobody knows which products were sent, delivered, or still need a follow-up.",
+  "Briefs, deadlines, drafts, and content rights live in different places.",
+  "Promo codes and live links are disconnected from each collaboration.",
+  "Fees, gifting costs, and payout status are hard to reconcile.",
+  "The next creator partnership is chosen without a clear view of sales performance.",
 ] as const;
 
 export const workflow = [
   {
-    title: "Add your creators",
-    description: "Import creator contacts or add them manually to your CRM.",
+    title: "Build your creator CRM",
+    description: "Import your roster with contacts, rates, audience fit, notes, and complete relationship history.",
   },
   {
-    title: "Launch a campaign",
+    title: "Plan and seed",
     description:
-      "Set the brief, deliverables, deadlines, payment amount, and creator requirements.",
+      "Set the brief, select products, assign codes, record gifting, agree fees, and confirm deliverables.",
   },
   {
-    title: "Track every collaboration",
+    title: "Launch every post",
     description:
-      "Move creators from Contacted through Content Submitted, Approved, Posted, and Paid.",
+      "Move each creator from outreach to product sent, draft review, approved, live, and paid.",
   },
   {
-    title: "Measure the results",
+    title: "Retain the winners",
     description:
-      "Track content links, views, engagement, conversions, spend, and performance.",
+      "Compare content, orders, attributed revenue, ROAS, and total cost to decide who to work with again.",
   },
 ] as const;
 
 export const audiences = [
   {
-    title: "D2C Brands",
-    description: "For growing brands running recurring influencer and UGC campaigns.",
+    title: "Beauty & wellness",
+    description: "Keep gifting, launch content, usage rights, promo codes, and repeat creator relationships connected.",
   },
   {
-    title: "Marketing Teams",
+    title: "Fashion & lifestyle",
     description:
-      "For small teams that need a structured workflow without enterprise complexity.",
+      "Coordinate seasonal drops, product variants, creator deliverables, and performance without another spreadsheet.",
   },
   {
-    title: "Influencer Agencies",
+    title: "Food & consumer",
     description:
-      "For agencies managing multiple brands, creators, deliverables, and payment records.",
+      "Run always-on seeding and paid partnerships while seeing which creators actually move product.",
   },
 ] as const;
 
@@ -71,31 +71,36 @@ export const faqs = [
   {
     question: "Who is this product for?",
     answer:
-      "It is designed for small brands, D2C companies, marketing teams, and agencies that work with micro-influencers and UGC creators.",
+      "Fluebaze is built for lean e-commerce and DTC teams that manage recurring influencer, affiliate, ambassador, and UGC campaigns.",
   },
   {
     question: "Is this an influencer discovery platform?",
     answer:
-      "The initial product focuses on managing existing creator relationships and campaigns. Creator discovery may be added later.",
+      "No. Fluebaze starts once you have a creator in mind. It helps your team manage the relationship, product seeding, campaign work, and results in one CRM.",
+  },
+  {
+    question: "Can I track gifted and paid collaborations?",
+    answer:
+      "Yes. Keep product value, creator fees, deliverables, deadlines, payment status, and notes together for both gifted and paid partnerships.",
+  },
+  {
+    question: "Does Fluebaze connect content to sales?",
+    answer:
+      "Campaign reporting is designed around promo codes, tracking links, orders, attributed revenue, and creator-level return alongside reach and engagement.",
   },
   {
     question: "Can creators use the platform?",
     answer:
-      "Creators will receive a simple secure portal where they can review briefs, upload drafts, submit content links, and provide invoices.",
+      "Creators receive a focused portal for briefs, shipping details, draft uploads, live links, usage terms, and invoices—without needing to learn your internal workflow.",
   },
   {
-    question: "Will the product support payments?",
+    question: "Will Fluebaze send products or payments?",
     answer:
-      "The first version will help teams record and track payments. Automated payment processing may be introduced later.",
+      "The first release tracks product seeding and payout status; it does not move inventory or money. Commerce and payment integrations are planned as the pilot develops.",
   },
   {
     question: "When will early access begin?",
     answer:
-      "Early-access users will be invited in small groups as the product becomes ready.",
-  },
-  {
-    question: "How much will it cost?",
-    answer:
-      "Early users will receive special founding-customer pricing before the public launch.",
+      "E-commerce teams will be invited in small pilot groups. Early users receive hands-on onboarding, roadmap input, and founding-customer pricing.",
   },
 ] as const;

@@ -11,11 +11,11 @@ export type WaitlistState = {
 };
 
 const businessTypes = [
-  "D2C brand",
-  "Marketing team",
-  "Influencer agency",
-  "Freelancer",
-  "Other",
+  "Beauty & wellness brand",
+  "Fashion & lifestyle brand",
+  "Food & beverage brand",
+  "Consumer goods brand",
+  "Other ecommerce brand",
 ] as const;
 
 const collaborationRanges = [
@@ -76,7 +76,7 @@ export async function joinWaitlist(
   if (!supabase) {
     return {
       status: "error",
-      message: "Waitlist setup is not complete yet. Please try again shortly.",
+      message: "Pilot signup is not available yet. Please try again shortly.",
     };
   }
 
@@ -101,13 +101,13 @@ export async function joinWaitlist(
       if (error.code === "23505") {
         return {
           status: "duplicate",
-          message: "You’re already on the waitlist — we’ll be in touch when your spot is ready.",
+          message: "You’re already on the pilot list — we’ll be in touch when your spot is ready.",
         };
       }
 
       return {
         status: "error",
-        message: `Supabase insert error${error.code ? ` (${error.code})` : ""}: ${error.message}`,
+        message: "We couldn’t join the pilot right now. Please try again shortly.",
       };
     }
 
@@ -115,19 +115,19 @@ export async function joinWaitlist(
       console.error("Supabase insert error: insert returned no row.");
       return {
         status: "error",
-        message: "Supabase insert error: the database did not return the inserted row.",
+        message: "We couldn’t join the pilot right now. Please try again shortly.",
       };
     }
 
     return {
       status: "success",
-      message: "You’re on the list! We’ll reach out when your early-access spot is ready.",
+      message: "You’re on the list! We’ll reach out when your e-commerce pilot spot is ready.",
     };
   } catch (error) {
     console.error("Supabase insert exception:", error);
     return {
       status: "error",
-      message: `Supabase insert request failed: ${error instanceof Error ? error.message : "Unknown server error."}`,
+      message: "We couldn’t join the pilot right now. Please try again shortly.",
     };
   }
 }

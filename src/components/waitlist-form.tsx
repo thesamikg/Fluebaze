@@ -15,7 +15,7 @@ function SubmitButton({ pending }: { pending: boolean }) {
         </>
       ) : (
         <>
-          Join the waitlist <ArrowRight aria-hidden="true" size={18} />
+          Join the e-commerce pilot <ArrowRight aria-hidden="true" size={18} />
         </>
       )}
     </button>
@@ -65,14 +65,14 @@ export function WaitlistForm() {
 
       <div className="field-grid">
         <div className="field">
-          <label htmlFor="business_type">Business type</label>
+          <label htmlFor="business_type">E-commerce category</label>
           <select id="business_type" name="business_type" required defaultValue="">
             <option value="" disabled>Select one</option>
-            <option>D2C brand</option>
-            <option>Marketing team</option>
-            <option>Influencer agency</option>
-            <option>Freelancer</option>
-            <option>Other</option>
+            <option>Beauty &amp; wellness brand</option>
+            <option>Fashion &amp; lifestyle brand</option>
+            <option>Food &amp; beverage brand</option>
+            <option>Consumer goods brand</option>
+            <option>Other ecommerce brand</option>
           </select>
         </div>
         <div className="field">
@@ -89,8 +89,8 @@ export function WaitlistForm() {
       </div>
 
       <div className="field">
-        <label htmlFor="biggest_challenge">What is your biggest campaign management challenge? <span>Optional</span></label>
-        <textarea id="biggest_challenge" name="biggest_challenge" maxLength={1000} rows={4} placeholder="Tell us where your current workflow gets messy…" />
+        <label htmlFor="biggest_challenge">Where does your creator workflow break today? <span>Optional</span></label>
+        <textarea id="biggest_challenge" name="biggest_challenge" maxLength={1000} rows={4} placeholder="Product seeding, follow-ups, content approvals, promo codes, reporting…" />
       </div>
 
       <SubmitButton pending={pending} />
@@ -101,7 +101,7 @@ export function WaitlistForm() {
           <span>{state.message}</span>
         </div>
       )}
-      <p className="privacy-note">No spam. We will only contact you about early access and important product updates.</p>
+      <p className="privacy-note">No spam. We will only contact you about the e-commerce pilot and important product updates.</p>
     </form>
   );
 }
